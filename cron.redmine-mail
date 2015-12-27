@@ -1,0 +1,3 @@
+30 6 * * * root echo `date` >> /var/log/bitnami/mail.log;cd /opt/redmine/apps/redmine/htdocs;/opt/redmine/ruby/bin/rake --trace redmine:send_reminders days=3 RAILS_ENV=production 1>> /var/log/bitnami/mail.log 2>&1
+
+# */15 * * * * root echo `date` >> /var/log/bitnami/mail.log;/opt/redmine/ruby/bin/rake --trace -f /opt/redmine/apps/redmine/htdocs/Rakefile redmine:email:receive_pop3 RAILS_ENV="production" host=%MAIL_SERVER_IP% project=my_task_project tracker=作業 priority=通常 username=%SET_YOUR_MAIL_ADDR% password=%SET_YOUR_MAIL_PASS% allow_anonymous=1 allow_override=project,tracker,priority 1>> /var/log/bitnami/mail.log 2>&1
