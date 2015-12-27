@@ -1,0 +1,20 @@
+/var/log/bitnami/access_log
+/var/log/bitnami/error_log
+/var/log/bitnami/production.log
+/var/log/bitnami/mail.log
+/opt/redmine/mysql/data/mysqld.log  {
+        daily
+        compress
+        dateext
+        missingok
+        notifempty
+        copytruncate
+        olddir /var/log/archive
+        sharedscripts
+        rotate 2
+        lastaction
+          ln -s /var/log/bitnami/access_log /opt/redmine/apps/redmine/htdocs/log/access_log
+          ln -s /var/log/bitnami/error_log /opt/redmine/apps/redmine/htdocs/log/error_log
+          ln -s /var/log/bitnami/production.log /opt/redmine/apps/redmine/htdocs/log/production.log
+        endscript
+}
