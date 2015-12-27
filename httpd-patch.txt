@@ -1,0 +1,19 @@
+--- httpd.conf
+@@ -280,7 +280,7 @@
+ # logged here.  If you *do* define an error logfile for a <VirtualHost>
+ # container, that host's errors will be logged there and not here.
+ #
+-ErrorLog "logs/error_log"
++ErrorLog "/var/log/bitnami/error_log"
+
+ #
+ # LogLevel: Control the number of messages logged to the error_log.
+@@ -309,7 +309,7 @@
+     # define per-<VirtualHost> access logfiles, transactions will be
+     # logged therein and *not* in this file.
+     #
+-    CustomLog "logs/access_log" common
++    CustomLog "/var/log/bitnami/access_log" common
+
+     #
+     # If you prefer a logfile with access, agent, and referer information
