@@ -1,0 +1,5 @@
+@@ -1,2 +1,4 @@
+ #!/bin/bash
++# chkconfig: 2345 80 30
++# description: Bitnami Service
+ # Allow only root execution
