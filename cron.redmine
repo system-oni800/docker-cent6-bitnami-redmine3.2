@@ -1,0 +1,2 @@
+05 04 * * * root /root/redmine_dbbkup.sh > /var/log/archive/redmine_bkup.log 2>&1
+05 13 * * * root /root/daytime_dbbkup.sh > /var/log/archive/redmine_bkup_day.log 2>&1
