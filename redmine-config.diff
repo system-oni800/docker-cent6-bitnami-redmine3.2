@@ -1,0 +1,16 @@
+--- configuration.yml
+@@ -275,6 +275,13 @@
+ # specific configuration options for production environment
+ # that overrides the default ones
+ production:
++ # email_delivery:
++  delivery_method: :smtp
++  smtp_settings:
++     address: %SET_YOUR_SMTP_SERVER%
++     port: 25
++     domain: localhost
++     authentication: :none
+
+ # specific configuration options for development environment
+ # that overrides the default ones
+ 
