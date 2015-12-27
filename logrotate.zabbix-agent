@@ -1,0 +1,10 @@
+/var/log/zabbix/zabbix_agentd.log {
+        daily
+        missingok
+        dateext
+        notifempty
+        compress
+        rotate 2
+        olddir /var/log/archive
+        create 0664 zabbix zabbix
+}
