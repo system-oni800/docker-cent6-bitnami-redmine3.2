@@ -31,7 +31,7 @@ the bitnami installer should stop and show message below.
 ```
 $./build.sh | tee logfile 2>&1 
 ```
-if you keep the build-log to a file
+If you keep the build-log into a file using stdout via pipe-queue.
 
 [Execute]
 ```
@@ -50,3 +50,4 @@ If you'd like to change the lamg-set, modify the files below.
 
 1. install_bitnami.sh : line 28: send -- "**9**\n" ==> **9** is Japanese
 2. Dokcerfile  : line 36: RUN ln -sf /usr/share/zoneinfo**/Asia/Tokyo** /etc/localtime  set localtime
+
